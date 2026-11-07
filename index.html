@@ -9,7 +9,8 @@
 <body data-page="home">
   <header class="site-header">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Car Wash logo">
+     <img src="{{ url_for('static', filename='images/logo.png') }}"
+     alt="Car Wash Logo">
       <span>Car Wash</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
@@ -36,7 +37,8 @@
     </section>
 
     <section class="hero-image-wrap">
-      <img class="hero-image" src="assets/home-car.jpg" alt="Red car being washed">
+      <img src="{{ url_for('static', filename='images/car-wash.jpg') }}"
+     alt="Red car being washed">
     </section>
   </main>
 
