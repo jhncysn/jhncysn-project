@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Wash | Book an Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="appointment">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Car Wash logo">
+      <span>Car Wash</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="dashboard.html" data-page="dashboard" data-dashboard-link hidden>Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-page appointment-page">
+    <section class="dashboard-heading">
+      <div>
+        <p class="eyebrow">BOOKING DETAILS</p>
+        <h1>Schedule your car wash</h1>
+        <p class="dashboard-subtitle">Choose your service, preferred date and time, and where you would like us to wash your car.</p>
+      </div>
+    </section>
+
+    <section class="new-appointment-section">
+      <form class="appointment-form" id="appointmentForm">
+        <label>Your name<input name="customer" type="text" required maxlength="80" autocomplete="name" placeholder="e.g. Jordan Lee"></label>
+        <label>Vehicle<input name="vehicle" type="text" required maxlength="80" placeholder="e.g. Honda Civic"></label>
+        <label>Service
+          <select name="service" required>
+            <option value="BASIC CLEANING">Basic cleaning · 300</option>
+            <option value="PREMIUM CLEANING">Premium cleaning · 700</option>
+            <option value="COMPLEX CLEANING">Complex cleaning · 1500</option>
+          </select>
+        </label>
+        <label>Service location / address<input name="location" type="text" required maxlength="160" autocomplete="street-address" placeholder="Where should we meet you?"></label>
+        <label>Preferred date<input name="date" type="date" required></label>
+        <label>Preferred time<input name="time" type="time" required></label>
+        <button class="save-appointment" type="submit">Book appointment</button>
+      </form>
+      <p class="appointment-confirmation" id="appointmentConfirmation" role="status" tabindex="-1" hidden>Your appointment request has been saved. Thank you!</p>
+      <p class="login-message" id="appointmentMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>

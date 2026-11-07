@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Wash | My Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="user-dashboard">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Car Wash logo">
+      <span>Car Wash</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="services.html" data-page="services">Services</a>
+      <button class="logout-button" type="button" data-logout>Log out</button>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+    <section class="dashboard-heading">
+      <div>
+        <p class="eyebrow">MY ACCOUNT</p>
+        <h1>My dashboard</h1>
+        <p class="dashboard-subtitle">Your upcoming car wash appointments.</p>
+      </div>
+      <a class="dashboard-book-link" href="services.html">+ Book a wash</a>
+    </section>
+
+    <section class="dashboard-stats" aria-label="Appointment summary">
+      <article class="stat-block">
+        <span class="stat-label">TOTAL APPOINTMENTS</span>
+        <strong id="totalCount">0</strong>
+        <span class="stat-detail">Your bookings</span>
+      </article>
+      <article class="stat-block stat-today">
+        <span class="stat-label">TODAY</span>
+        <strong id="todayCount">0</strong>
+        <span class="stat-detail">Scheduled for today</span>
+      </article>
+      <article class="stat-block">
+        <span class="stat-label">NEEDS ATTENTION</span>
+        <strong id="scheduledCount">0</strong>
+        <span class="stat-detail">Still scheduled</span>
+      </article>
+    </section>
+
+    <section class="appointments-section">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">SCHEDULE</p>
+          <h2>My appointments</h2>
+        </div>
+        <span class="appointment-count" id="appointmentCount">0 appointments</span>
+      </div>
+      <div class="table-wrap">
+        <table class="appointment-table">
+          <thead>
+            <tr><th>Customer / vehicle</th><th>Service</th><th>Location</th><th>Date / time</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody id="appointmentRows"></tbody>
+        </table>
+        <p class="empty-appointments" id="emptyAppointments">No appointments yet for your account.</p>
+      </div>
+      <p class="login-message" id="appointmentMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>

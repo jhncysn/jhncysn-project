@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Wash | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Car Wash logo">
+      <span>Car Wash</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="login.html" data-page="login">Login</a>
+    </nav>
+  </header>
+
+  <main class="page login-page">
+    <section>
+      <img class="login-image" src="assets/login-car.jpg" alt="White car being washed">
+    </section>
+
+    <section class="login-panel">
+      <form class="login-box auth-form" id="loginForm">
+        <h1 class="login-title">Login</h1>
+
+        <div class="form-row">
+          <label for="loginUsername">username:</label>
+          <input id="loginUsername" name="username" type="text" autocomplete="username">
+        </div>
+
+        <div class="form-row">
+          <label for="loginPassword">password:</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password">
+        </div>
+
+        <div class="auth-actions">
+          <button class="text-button" type="button" data-auth-toggle="register">Create account</button>
+          <button class="login-submit" type="submit">Login</button>
+        </div>
+        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+      </form>
+
+      <form class="login-box auth-form hidden" id="registerForm" novalidate>
+        <h1 class="login-title">Create account</h1>
+
+        <div class="form-row">
+          <label for="registerUsername">username:</label>
+          <input id="registerUsername" name="username" type="text" autocomplete="username">
+        </div>
+
+        <div class="form-row">
+          <label for="registerPassword">password:</label>
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password">
+        </div>
+
+        <div class="form-row">
+          <label for="confirmPassword">confirm:</label>
+          <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password">
+        </div>
+
+        <div class="auth-actions">
+          <button class="text-button" type="button" data-auth-toggle="login">Back to login</button>
+          <button class="login-submit" type="submit">Create</button>
+        </div>
+        <p id="registerMessage" class="login-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js?v=6"></script>
+</body>
+</html>
